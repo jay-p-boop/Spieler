@@ -1,0 +1,24 @@
+{
+  "name": "vuejs-with-vite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@egjs/vue3-flicking": "^4.11.0",
+    "double-metaphone": "^2.0.1",
+    "doublemetaphone": "^0.1.2",
+    "element-plus": "^2.3.14",
+    "fast-levenshtein": "^3.0.0",
+    "firebase": "^10.4.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.33.1",
+    "soundex-code": "^2.0.1",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.2"
+  }
+}

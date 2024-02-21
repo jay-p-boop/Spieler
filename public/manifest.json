@@ -1,0 +1,16 @@
+{
+  "short_name": "Poki",
+  "name": "Poki",
+  "icons": [
+    {
+      "src": "/poki.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/poki.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/
