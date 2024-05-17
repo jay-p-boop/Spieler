@@ -64,7 +64,7 @@
     </div>
 
     <!-- Standardansicht -->
-    <div v-else>      
+    <div v-if="!learningMode && !clubLearningMode">      
       <div class="player-row" v-for="player in players" :key="player.name">
         <div class="player-card" @click="speakPlayerName(player.name)" :ref="`player-${player.name.toLowerCase().replace(/\s/g, '')}`">
           <div class="image-container">
@@ -91,6 +91,7 @@
     </div>
   </div>
 </template>
+
 
 
 
@@ -516,6 +517,11 @@ export default {
       this.correctPlayerIndex = null; // Zurücksetzen des korrekten Spielerindex
     },
     showNextClub() {
+      if (this.guessedClubs.length === this.players.length) {
+        alert("Alle Vereine wurden erraten!");
+        this.stopLearningMode();
+        return;
+      }
       let newIndex;
       do {
         newIndex = Math.floor(Math.random() * this.players.length);
@@ -582,6 +588,3 @@ export default {
   }
 };
 </script>
-
-
-
