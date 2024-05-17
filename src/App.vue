@@ -4,7 +4,7 @@
       class="floating-mic" 
       :class="{ 'listening': isListening }" 
       :disabled="micButtonDisabled"
-      @click="listenToPlayerName"
+      @click="listenToName"
     >
       <div v-if="isListening" class="pulse"></div>
       🎤
@@ -14,7 +14,7 @@
     <div class="app-bar">
       <button 
         class="tab-button" 
-        :class="{ 'active-tab': !learningMode }" 
+        :class="{ 'active-tab': !learningMode && !clubLearningMode }" 
         @click="stopLearningMode"
       >
         🏠 Start
@@ -24,11 +24,18 @@
         :class="{ 'active-tab': learningMode }" 
         @click="startLearningMode"
       >
-        💡 Lernen
+        📚 Spieler Lernen
+      </button>
+      <button 
+        class="tab-button" 
+        :class="{ 'active-tab': clubLearningMode }" 
+        @click="startClubLearningMode"
+      >
+        📚 Vereine Lernen
       </button>
     </div>
 
-    <!-- Lernmodus -->
+    <!-- Spielernamen-Lernmodus -->
     <div class="player-card" v-if="learningMode">
       <img 
         :src="currentLearningPlayer.image" 
@@ -38,20 +45,32 @@
       />
       <p>Wie heißt dieser Spieler?</p>
 
-      <button class="button-80" @click="showNextPlayer">➡️</button>
+      <button class="button-80" @click="showNextPlayer">Weiter</button>
+      <p>Erkannter Text: {{ recognizedText }}</p>
+    </div>
+
+    <!-- Vereinsnamen-Lernmodus -->
+    <div class="player-card" v-if="clubLearningMode">
+      <img 
+        :src="currentLearningPlayer.wappen" 
+        :class="{ 'correct-answer': correctPlayerIndex === currentLearningIndex }" 
+        @click="speakClubName(currentLearningPlayer.verein)" 
+        alt="Learning Club Badge" 
+      />
+      <p>Wie heißt dieser Verein?</p>
+
+      <button class="button-80" @click="showNextClub">Weiter</button>
       <p>Erkannter Text: {{ recognizedText }}</p>
     </div>
 
     <!-- Standardansicht -->
-
-    
     <div v-else>      
       <div class="player-row" v-for="player in players" :key="player.name">
         <div class="player-card" @click="speakPlayerName(player.name)" :ref="`player-${player.name.toLowerCase().replace(/\s/g, '')}`">
-        <div class="image-container">
-          <img :src="player.image" alt="Player Image" class="player-image" />
-          <img :src="player.wappen" alt="Player Badge" class="club-badge" @click.stop="speakClubName(player.verein)"  />
-        </div>
+          <div class="image-container">
+            <img :src="player.image" alt="Player Image" class="player-image" />
+            <img :src="player.wappen" alt="Player Badge" class="club-badge" @click.stop="speakClubName(player.verein)"  />
+          </div>
           <p class="player-nummer">{{ player.nummer }}</p>
           <p class="player-name">{{ player.name }}</p>
           <p class="player-info">Position: {{ player.position }}</p>
@@ -62,6 +81,7 @@
     </div>
   </div>
 </template>
+
 
 
 
@@ -372,7 +392,6 @@ import * as SpeechSDK from 'microsoft-cognitiveservices-speech-sdk';
 export default {
   data() {
     return {
-      
       players: playersData.map(player => ({
         name: player.Name.trim().split('\n').find(line => line.trim() !== ''),
         position: player.Position.split('\n').reverse().find(line => line.trim() !== ''),
@@ -385,6 +404,7 @@ export default {
         wappen: player.Wappen
       })),
       learningMode: false,
+      clubLearningMode: false,
       currentLearningPlayer: null,
       currentLearningIndex: null,
       recognizedText: "",
@@ -411,16 +431,23 @@ export default {
       this.speakMessage(name);
     },
     speakClubName(clubName) {
-    this.speakMessage(clubName);
+      this.speakMessage(clubName);
     },
-    
     startLearningMode() {
       this.currentLearningIndex = Math.floor(Math.random() * this.players.length);
       this.currentLearningPlayer = this.players[this.currentLearningIndex];
       this.learningMode = true;
+      this.clubLearningMode = false;
+    },
+    startClubLearningMode() {
+      this.currentLearningIndex = Math.floor(Math.random() * this.players.length);
+      this.currentLearningPlayer = this.players[this.currentLearningIndex];
+      this.clubLearningMode = true;
+      this.learningMode = false;
     },
     stopLearningMode() {
       this.learningMode = false;
+      this.clubLearningMode = false;
       this.currentLearningPlayer = null;
       this.currentLearningIndex = null;
     },
@@ -434,8 +461,7 @@ export default {
       } else {
         console.error('Keine Referenz gefunden für:', cleanPlayerName);
       }
-    }
-,
+    },
     findClosestPlayer(spokenWord) {
       let closestPlayer = null;
       let smallestDistance = Infinity;
@@ -452,6 +478,22 @@ export default {
 
       return closestPlayer;
     },
+    findClosestClub(spokenWord) {
+      let closestClub = null;
+      let smallestDistance = Infinity;
+
+      this.players.forEach(player => {
+        let clubName = player.verein.toLowerCase();
+        let distance = levenshtein.get(spokenWord, clubName);
+
+        if (distance < smallestDistance) {
+          smallestDistance = distance;
+          closestClub = player;
+        }
+      });
+
+      return closestClub;
+    },
     showNextPlayer() {
       let newIndex;
       do {
@@ -461,8 +503,16 @@ export default {
       this.currentLearningPlayer = this.players[this.currentLearningIndex];
       this.correctPlayerIndex = null; // Zurücksetzen des korrekten Spielerindex
     },
-    
-    listenToPlayerName() {
+    showNextClub() {
+      let newIndex;
+      do {
+        newIndex = Math.floor(Math.random() * this.players.length);
+      } while (newIndex === this.currentLearningIndex);
+      this.currentLearningIndex = newIndex;
+      this.currentLearningPlayer = this.players[this.currentLearningIndex];
+      this.correctPlayerIndex = null; // Zurücksetzen des korrekten Vereinsindex
+    },
+    listenToName() {
       if (this.micButtonDisabled) {
         return;
       }
@@ -481,9 +531,9 @@ export default {
         if (result.reason === SpeechSDK.ResultReason.RecognizedSpeech) {
           const spokenWord = result.text.toLowerCase().trim().replace(/\.$/, '');
           this.recognizedText = spokenWord;
-          const closestPlayer = this.findClosestPlayer(spokenWord);
 
           if (this.learningMode) {
+            const closestPlayer = this.findClosestPlayer(spokenWord);
             if (closestPlayer && closestPlayer.name === this.currentLearningPlayer.name) {
               this.correctPlayerIndex = this.currentLearningIndex;
               this.successSound.play();
@@ -493,8 +543,20 @@ export default {
             } else {
               this.wrongSound.play();
             }
+          } else if (this.clubLearningMode) {
+            const closestClub = this.findClosestClub(spokenWord);
+            if (closestClub && closestClub.verein === this.currentLearningPlayer.verein) {
+              this.correctPlayerIndex = this.currentLearningIndex;
+              this.successSound.play();
+              setTimeout(() => {
+                this.showNextClub();
+              }, 1000);
+            } else {
+              this.wrongSound.play();
+            }
           } else {
             // Logik für den normalen Modus
+            const closestPlayer = this.findClosestPlayer(spokenWord);
             if (closestPlayer) {
               this.scrollToPlayer(closestPlayer.name);
             }
@@ -507,4 +569,5 @@ export default {
   }
 };
 </script>
+
 
