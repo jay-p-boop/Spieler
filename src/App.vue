@@ -79,8 +79,19 @@
         </div>
       </div>
     </div>
+
+    <!-- Bereits erratene Vereine -->
+    <div v-if="clubLearningMode && guessedClubs.length > 0" class="guessed-clubs">
+      <h3>Bereits erratene Vereine:</h3>
+      <ul>
+        <li v-for="club in guessedClubs" :key="club">
+          {{ club }} ✔️
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
+
 
 
 
@@ -414,7 +425,8 @@ export default {
       permissionGranted: false,
       micButtonDisabled: false,
       encoder: new doubleMetaphonePackage(),
-      isListening: false
+      isListening: false,
+      guessedClubs: [] // Neu: Liste der bereits erratenen Vereine
     };
   },
   created() {
@@ -440,8 +452,7 @@ export default {
       this.clubLearningMode = false;
     },
     startClubLearningMode() {
-      this.currentLearningIndex = Math.floor(Math.random() * this.players.length);
-      this.currentLearningPlayer = this.players[this.currentLearningIndex];
+      this.showNextClub(); // Initiales Anzeigen eines Vereins
       this.clubLearningMode = true;
       this.learningMode = false;
     },
@@ -450,6 +461,7 @@ export default {
       this.clubLearningMode = false;
       this.currentLearningPlayer = null;
       this.currentLearningIndex = null;
+      this.guessedClubs = []; // Zurücksetzen der erratenen Vereine
     },
     scrollToPlayer(playerName) {
       // Entfernen von Leerzeichen und Punkten am Ende des Strings
@@ -507,7 +519,7 @@ export default {
       let newIndex;
       do {
         newIndex = Math.floor(Math.random() * this.players.length);
-      } while (newIndex === this.currentLearningIndex);
+      } while (this.guessedClubs.includes(this.players[newIndex].verein));
       this.currentLearningIndex = newIndex;
       this.currentLearningPlayer = this.players[this.currentLearningIndex];
       this.correctPlayerIndex = null; // Zurücksetzen des korrekten Vereinsindex
@@ -547,6 +559,7 @@ export default {
             const closestClub = this.findClosestClub(spokenWord);
             if (closestClub && closestClub.verein === this.currentLearningPlayer.verein) {
               this.correctPlayerIndex = this.currentLearningIndex;
+              this.guessedClubs.push(this.currentLearningPlayer.verein); // Hinzufügen des erratenen Vereins zur Liste
               this.successSound.play();
               setTimeout(() => {
                 this.showNextClub();
@@ -569,5 +582,6 @@ export default {
   }
 };
 </script>
+
 
 
