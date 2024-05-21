@@ -407,7 +407,6 @@ import levenshtein from 'fast-levenshtein';
 import playersData from './jsonspieler.json'; 
 import successSoundPath from '@/assets/success.mp3';
 import wrongSoundPath from '@/assets/wrong.mp3';
-import pointSoundPath from '@/assets/point.mp3'; // Neuer Sound für Punkte
 import doubleMetaphonePackage from 'doublemetaphone';
 import * as SpeechSDK from 'microsoft-cognitiveservices-speech-sdk';
 
@@ -432,14 +431,12 @@ export default {
       recognizedText: "",
       successSound: new Audio(successSoundPath),
       wrongSound: new Audio(wrongSoundPath),
-      pointSound: new Audio(pointSoundPath),
       correctPlayerIndex: null,
       permissionGranted: false,
       micButtonDisabled: false,
       encoder: new doubleMetaphonePackage(),
       isListening: false,
-      guessedClubs: [], // Neu: Liste der bereits erratenen Vereine
-      points: 0 // Neu: Punktesystem
+      guessedClubs: [] // Neu: Liste der bereits erratenen Vereine
     };
   },
   created() {
@@ -566,8 +563,6 @@ export default {
             const closestPlayer = this.findClosestPlayer(spokenWord);
             if (closestPlayer && closestPlayer.name === this.currentLearningPlayer.name) {
               this.correctPlayerIndex = this.currentLearningIndex;
-              this.points += 10; // Punkte hinzufügen
-              this.pointSound.play(); // Punktesound abspielen
               this.successSound.play();
               setTimeout(() => {
                 this.showNextPlayer();
@@ -580,8 +575,6 @@ export default {
             if (closestClub && closestClub.verein === this.currentLearningPlayer.verein) {
               this.correctPlayerIndex = this.currentLearningIndex;
               this.guessedClubs.push(this.currentLearningPlayer.verein); // Hinzufügen des erratenen Vereins zur Liste
-              this.points += 10; // Punkte hinzufügen
-              this.pointSound.play(); // Punktesound abspielen
               this.successSound.play();
               setTimeout(() => {
                 this.showNextClub();
@@ -604,5 +597,3 @@ export default {
   }
 };
 </script>
-
-
