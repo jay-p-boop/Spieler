@@ -37,12 +37,20 @@
 
     <!-- Spielernamen-Lernmodus -->
     <div class="player-card" v-if="learningMode">
-      <img 
-        :src="currentLearningPlayer.image" 
-        :class="{ 'correct-answer': correctPlayerIndex === currentLearningIndex }" 
-        @click="speakPlayerName(currentLearningPlayer.name)" 
-        alt="Learning Player Image" 
-      />
+      <div class="image-container">
+        <img 
+          :src="currentLearningPlayer.image" 
+          :class="{ 'correct-answer': correctPlayerIndex === currentLearningIndex }" 
+          @click="speakPlayerName(currentLearningPlayer.name)" 
+          alt="Learning Player Image" 
+        />
+        <img 
+          :src="currentLearningPlayer.wappen" 
+          alt="Player Badge" 
+          class="club-badge" 
+          @click.stop="speakClubName(currentLearningPlayer.verein)" 
+        />
+      </div>
       <p>Wie heißt dieser Spieler?</p>
 
       <button class="button-80" @click="showNextPlayer">Weiter</button>
@@ -91,6 +99,7 @@
     </div>
   </div>
 </template>
+
 
 
 
