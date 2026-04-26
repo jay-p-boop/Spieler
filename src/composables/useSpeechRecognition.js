@@ -1,7 +1,7 @@
 /**
- * useSpeechRecognition — SOTA Dual-Stack Speech Recognition
- * Primary: Web Speech API (free, browser-native)
- * Fallback: Azure Cognitive Services Speech SDK
+ * useSpeechRecognition — SOTA Speech Recognition
+ * Uses Web Speech API (free, browser-native, no API key)
+ * Supports interim results, confidence scoring, German language
  */
 import { ref, onUnmounted } from 'vue'
 
@@ -14,7 +14,6 @@ export function useSpeechRecognition() {
   const isSupported = ref(false)
 
   let recognition = null
-  let azureRecognizer = null
   let timeoutId = null
 
   // ─── Detect Support ───
@@ -22,16 +21,17 @@ export function useSpeechRecognition() {
   isSupported.value = !!SpeechRecognition
 
   /**
-   * Start listening with Web Speech API (primary)
+   * Start listening with Web Speech API
    */
-  function startWebSpeech() {
-    return new Promise((resolve) => {
-      if (!SpeechRecognition) {
-        error.value = 'Web Speech API nicht unterstützt'
-        resolve(null)
-        return
-      }
+  async function listen() {
+    if (isListening.value) return null
 
+    if (!SpeechRecognition) {
+      error.value = 'Spracherkennung wird in diesem Browser nicht unterstützt. Bitte Chrome oder Edge nutzen.'
+      return null
+    }
+
+    return new Promise((resolve) => {
       recognition = new SpeechRecognition()
       recognition.lang = 'de-DE'
       recognition.continuous = false
@@ -72,7 +72,9 @@ export function useSpeechRecognition() {
         if (event.error === 'no-speech') {
           error.value = 'Keine Sprache erkannt. Versuche es nochmal.'
         } else if (event.error === 'not-allowed') {
-          error.value = 'Mikrofon-Zugriff verweigert. Bitte erlaube den Zugriff.'
+          error.value = 'Mikrofon-Zugriff verweigert. Bitte erlaube den Zugriff in den Browser-Einstellungen.'
+        } else if (event.error === 'network') {
+          error.value = 'Netzwerkfehler bei der Spracherkennung.'
         } else {
           error.value = `Fehler: ${event.error}`
         }
@@ -104,86 +106,11 @@ export function useSpeechRecognition() {
     })
   }
 
-  /**
-   * Start listening with Azure Speech SDK (fallback)
-   */
-  async function startAzureSpeech() {
-    const key = import.meta.env.VITE_AZURE_SPEECH_KEY
-    const region = import.meta.env.VITE_AZURE_SPEECH_REGION || 'westeurope'
-
-    if (!key) {
-      error.value = 'Azure Speech Key nicht konfiguriert.'
-      return null
-    }
-
-    try {
-      const SpeechSDK = await import('microsoft-cognitiveservices-speech-sdk')
-      const speechConfig = SpeechSDK.SpeechConfig.fromSubscription(key, region)
-      speechConfig.speechRecognitionLanguage = 'de-DE'
-      const audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput()
-      azureRecognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig)
-
-      return new Promise((resolve) => {
-        isListening.value = true
-        error.value = ''
-        transcript.value = ''
-
-        timeoutId = setTimeout(() => {
-          azureRecognizer?.stopContinuousRecognitionAsync()
-          error.value = 'Zeitüberschreitung'
-          isListening.value = false
-          resolve(null)
-        }, 10000)
-
-        azureRecognizer.recognizeOnceAsync(
-          (result) => {
-            clearTimeout(timeoutId)
-            isListening.value = false
-            if (result.reason === SpeechSDK.ResultReason.RecognizedSpeech) {
-              transcript.value = cleanTranscript(result.text)
-              confidence.value = 85 // Azure doesn't expose confidence easily
-              resolve(transcript.value)
-            } else {
-              error.value = 'Keine Sprache erkannt.'
-              resolve(null)
-            }
-          },
-          (err) => {
-            clearTimeout(timeoutId)
-            isListening.value = false
-            error.value = `Azure Fehler: ${err}`
-            resolve(null)
-          }
-        )
-      })
-    } catch (e) {
-      error.value = 'Azure SDK konnte nicht geladen werden.'
-      return null
-    }
-  }
-
-  /**
-   * Main entry: try Web Speech first, fall back to Azure
-   */
-  async function listen() {
-    if (isListening.value) return null
-
-    if (isSupported.value) {
-      return startWebSpeech()
-    } else {
-      return startAzureSpeech()
-    }
-  }
-
   function stop() {
     clearTimeout(timeoutId)
     if (recognition) {
       recognition.stop()
       recognition = null
-    }
-    if (azureRecognizer) {
-      azureRecognizer.stopContinuousRecognitionAsync()
-      azureRecognizer = null
     }
     isListening.value = false
   }
