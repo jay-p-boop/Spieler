@@ -1,134 +1,395 @@
-<template> <div id="app" role="application"> <!-- Fortschritts- und Punkteanzeige (Feature 1+2) --> <header class="stats-bar"> <div class="progress-info"> <strong>Gelernt:</strong> {{ playersLearnedCount }}/{{ totalPlayersCount }} </div> <div class="score-info"> <strong>Punkte:</strong> {{ totalPoints }} </div> </header>
-javascript
-
-
-<button
-  class="floating-mic"
-  :class="{ listening: isListening }"
-  :disabled="micButtonDisabled"
-  @click="listenToName"
-  aria-label="Spielernamen oder Vereinsnamen erkennen"
-  aria-live="polite"
->
-  <div v-if="isListening" class="pulse" aria-hidden="true"></div>
-  <span aria-hidden="true">🎤</span>
-</button>
-
-<div class="app-bar" role="navigation">
-  <button
-    class="tab-button"
-    :class="{ 'active-tab': !learningMode && !clubLearningMode }"
-    @click="stopLearningMode"
-    role="button"
-    aria-label="Startseite"
-  >
-    ⬅ Start
-  </button>
-  <button
-    class="tab-button"
-    :class="{ 'active-tab': learningMode }"
-    @click="startLearningMode"
-    role="button"
-    aria-label="Spieler lernen Modus"
-  >
-    🏃 Spieler Lernen
-  </button>
-  <button
-    class="tab-button"
-    :class="{ 'active-tab': clubLearningMode }"
-    @click="startClubLearningMode"
-    role="button"
-    aria-label="Vereine lernen Modus"
-  >
-    🏆 Vereine Lernen
-  </button>
-</div>
-
-<div class="player-card" v-if="learningMode" role="dialog" aria-labelledby="player-question">
-  <div class="image-container">
-    <img
-      :src="currentLearningPlayer.image"
-      :class="{ 'correct-answer': correctPlayerIndex === currentLearningIndex }"
-      @click="speakPlayerName(currentLearningPlayer.name)"
-      :alt="'Spielerbild von ' + currentLearningPlayer.name"
-    />
-    <img
-      :src="currentLearningPlayer.wappen"
-      :alt="'Vereinswappen von ' + currentLearningPlayer.verein"
-      class="club-badge"
-      @click.stop="speakClubName(currentLearningPlayer.verein)"
-    />
-  </div>
-  <p id="player-question">Wie heißt dieser Spieler?</p>
-
-  <!-- Kontextueller Tipp (Feature 3) -->
-  <div v-if="hintVisible" class="hint-box">
-    Tipp: Versuche, den Namen deutlich auszusprechen. Die korrekte Aussprache ist z.B. <em>{{ currentLearningPlayer.name }}</em>.
-  </div>
-
-  <button class="button-80" @click="showNextPlayer" role="button">Weiter</button>
-  <p>Erkannter Text: <span aria-live="polite">{{ recognizedText }}</span></p>
-  <p v-if="errorMessage" class="error-message" aria-live="assertive">Fehler: {{ errorMessage }}</p>
-</div>
-
-<div class="player-card" v-if="clubLearningMode" role="dialog" aria-labelledby="club-question">
-  <img
-    :src="currentLearningPlayer.wappen"
-    :class="{ 'correct-answer': correctPlayerIndex === currentLearningIndex }"
-    @click="speakClubName(currentLearningPlayer.verein)"
-    :alt="'Vereinswappen von ' + currentLearningPlayer.verein"
+<template>
+  <NavBar v-model="activeTab" />
+  <StatsBar
+    :points="points"
+    :streak="streak"
+    :progress="learnedCount"
+    :total="players.length"
+    :confidence="lastConfidence"
+    :visible="activeTab !== 'browse'"
   />
-  <p id="club-question">Wie heißt dieser Verein?</p>
 
-  <!-- Kontextueller Tipp (Feature 3) -->
-  <div v-if="hintVisible" class="hint-box">
-    Tipp: Konzentriere dich auf die Vereinsbezeichnung. Hier: <em>{{ currentLearningPlayer.verein }}</em>.
-  </div>
-
-  <button class="button-80" @click="showNextClub" role="button">Weiter</button>
-  <p>Erkannter Text: <span aria-live="polite">{{ recognizedText }}</span></p>
-  <p v-if="errorMessage" class="error-message" aria-live="assertive">Fehler: {{ errorMessage }}</p>
-  <div v-if="guessedClubs.length > 0" class="guessed-clubs">
-    <h3>Bereits erratene Vereine:</h3>
-    <ul v-if="!showAllClubs">
-      <li v-for="club in guessedClubs.slice(0, 5)" :key="club">
-        {{ club }} ✅
-      </li>
-    </ul>
-    <ul v-else>
-      <li v-for="club in guessedClubs" :key="club">
-        {{ club }} ✅
-      </li>
-    </ul>
-    <button v-if="guessedClubs.length > 5 && !showAllClubs" @click="showAllClubs = true">Mehr anzeigen</button>
-    <button v-else-if="showAllClubs" @click="showAllClubs = false">Weniger anzeigen</button>
-  </div>
-</div>
-
-<div v-if="!learningMode && !clubLearningMode">
-  <div class="player-row" v-for="player in players" :key="player.name">
-    <div
-      class="player-card"
-      @click="speakPlayerName(player.name)"
-      :ref="`player-${player.name.toLowerCase().replace(/\s/g, '')}`"
-      tabindex="0"
-      :aria-label="'Spielerkarte für ' + player.name + ', Position: ' + player.position + ', Alter: ' + player.age + ', Marktwert: ' + player.marketValue"
-    >
-      <div class="image-container">
-        <img :src="player.image" :alt="'Spielerbild von ' + player.name" class="player-image" />
-        <img
-          :src="player.wappen"
-          :alt="'Vereinswappen von ' + player.verein"
-          class="club-badge"
-          @click.stop="speakClubName(player.verein)"
-        />
-      </div>
-      <p class="player-nummer">{{ player.nummer }}</p>
-      <p class="player-name">{{ player.name }}</p>
-      <p class="player-info">Position: {{ player.position }}</p>
-      <p class="player-info">Alter: {{ player.age }} Jahre</p>
-      <p class="player-info">Marktwert: {{ player.marketValue }}</p>
+  <!-- ─── Browse Mode ─── -->
+  <section v-if="activeTab === 'browse'" class="browse-view">
+    <TeamFilter
+      v-model="selectedClub"
+      :clubs="clubNames"
+      :wappenMap="wappenMap"
+    />
+    <div class="player-grid">
+      <PlayerCard
+        v-for="player in filteredPlayers"
+        :key="player.Name"
+        :player="player"
+        :is-correct="highlightedPlayer === player.Name"
+      />
     </div>
-  </div>
-</div>
-</div> </template> <script> import levenshtein from "fast-levenshtein"; import * as SpeechSDK from "microsoft-cognitiveservices-speech-sdk"; export default { data() { return { players: [], learningMode: false, clubLearningMode: false, currentLearningPlayer: null, currentLearningIndex: null, recognizedText: "", successSound: new Audio("assets/success.mp3"), wrongSound: new Audio("assets/wrong.mp3"), /* (4) Erweiterte Audio-Feedbacks: neues Sound-Ereignis bei mehreren korrekten Antworten */ streakSound: new Audio("assets/streak.mp3"), correctPlayerIndex: null, permissionGranted: false, micButtonDisabled: false, isListening: false, guessedClubs: [], errorMessage: "", showAllClubs: false, /* (1) Personalisierte Fortschrittsanzeige */ playersLearnedCount: 0, totalPlayersCount: 0, /* (2) Gamification: Punkte-System */ totalPoints: 0, /* (3) Kontextuelle Tipps: wird angezeigt, wenn der Nutzer 2x hintereinander falsch liegt */ consecutiveFails: 0, hintVisible: false }; }, async created() { try { const response = await fetch("jsonspieler.json"); const playersData = await response.json(); this.players = playersData.map((player) => { const nameLine = player.Name.split("\n").find((line) => line.trim() !== ""); const positionLine = player.Position.split("\n").reverse().find((line) => line.trim() !== ""); const birthdateMatch = player.Geburtsdatum.match(/(.+) $(\d+)$/); return { name: nameLine ? nameLine.trim() : "", position: positionLine ? positionLine.trim() : "", birthdate: birthdateMatch ? birthdateMatch[1] : "", age: birthdateMatch ? birthdateMatch[2] : "", marketValue: player.Marktwert.trim(), image: player.Bild, verein: player.Verein, nummer: player.Nummer, wappen: player.Wappen }; }); /* Gesamte Spielerzahl für Fortschrittsberechnung */ this.totalPlayersCount = this.players.length; } catch (error) { console.error("Fehler beim Laden der Spielerdaten:", error); this.errorMessage = "Fehler beim Laden der Spielerdaten."; } navigator.permissions.query({ name: "microphone" }).then((permissionStatus) => { this.permissionGranted = permissionStatus.state === "granted"; permissionStatus.onchange = () => { this.permissionGranted = permissionStatus.state === "granted"; }; }); }, methods: { speakMessage(message) { const speech = new SpeechSynthesisUtterance(message); speech.lang = "de-DE"; window.speechSynthesis.speak(speech); }, speakPlayerName(name) { this.speakMessage(name); }, speakClubName(clubName) { this.speakMessage(clubName); }, startLearningMode() { this.resetQuizState(); this.currentLearningIndex = Math.floor(Math.random() * this.players.length); this.currentLearningPlayer = this.players[this.currentLearningIndex]; this.learningMode = true; this.clubLearningMode = false; }, startClubLearningMode() { this.resetQuizState(); this.showNextClub(); this.clubLearningMode = true; this.learningMode = false; }, stopLearningMode() { this.learningMode = false; this.clubLearningMode = false; this.currentLearningPlayer = null; this.currentLearningIndex = null; this.guessedClubs = []; this.recognizedText = ""; this.errorMessage = ""; this.hintVisible = false; }, scrollToPlayer(playerName) { const cleanPlayerName = playerName.trim().replace(/\.$/, "").toLowerCase(); const refName = `player-${cleanPlayerName.replace(/\s/g, "")}`; if (this.$refs[refName]) { const element = this.$refs[refName][0]; element.scrollIntoView({ behavior: "smooth" }); } else { console.error("Keine Referenz gefunden für:", cleanPlayerName); } }, findClosestPlayer(spokenWord) { let closestPlayer = null; let smallestDistance = Infinity; this.players.forEach((player) => { let playerName = player.name.toLowerCase(); let distance = levenshtein.get(spokenWord, playerName); if (distance < smallestDistance) { smallestDistance = distance; closestPlayer = player; } }); return closestPlayer; }, findClosestClub(spokenWord) { let closestClub = null; let smallestDistance = Infinity; this.players.forEach((player) => { let clubName = player.verein.toLowerCase(); let distance = levenshtein.get(spokenWord, clubName); if (distance < smallestDistance) { smallestDistance = distance; closestClub = player; } }); return closestClub; }, showNextPlayer() { this.resetQuizState(); let newIndex; do { newIndex = Math.floor(Math.random() * this.players.length); } while (newIndex === this.currentLearningIndex); this.currentLearningIndex = newIndex; this.currentLearningPlayer = this.players[this.currentLearningIndex]; }, showNextClub() { this.resetQuizState(); if (this.guessedClubs.length === this.players.length) { alert("Alle Vereine wurden erraten!"); this.stopLearningMode(); return; } let newIndex; do { newIndex = Math.floor(Math.random() * this.players.length); } while (this.guessedClubs.includes(this.players[newIndex].verein)); this.currentLearningIndex = newIndex; this.currentLearningPlayer = this.players[this.currentLearningIndex]; }, listenToName() { if (this.micButtonDisabled || !this.permissionGranted) { if (!this.permissionGranted) { this.errorMessage = "Bitte erlaube den Zugriff auf das Mikrofon in den Browser-Einstellungen."; } return; } this.isListening = true; this.micButtonDisabled = true; this.recognizedText = ""; this.errorMessage = ""; this.hintVisible = false; // Tipp ausblenden, wenn Aufnahme neu gestartet wird const speechConfig = SpeechSDK.SpeechConfig.fromSubscription("901e7cb5bc09481abf6dd507019a3f35", "westeurope"); speechConfig.speechRecognitionLanguage = "de-DE"; const audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput(); const recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig); let recognitionTimeout = setTimeout(() => { recognizer.stopContinuousRecognitionAsync(); this.errorMessage = "Zeitüberschreitung: Keine Sprache erkannt."; this.isListening = false; this.micButtonDisabled = false; this.increaseFail(); }, 10000); recognizer.recognizeOnceAsync( (result) => { clearTimeout(recognitionTimeout); this.isListening = false; this.micButtonDisabled = false; if (result.reason === SpeechSDK.ResultReason.RecognizedSpeech) { const spokenWord = result.text.toLowerCase().trim().replace(/\.$/, ""); this.recognizedText = spokenWord; if (this.learningMode) { const closestPlayer = this.findClosestPlayer(spokenWord); if (closestPlayer && closestPlayer.name === this.currentLearningPlayer.name) { this.handleCorrect(); /* Spieler-Fortschritt (Feature 1) */ this.playersLearnedCount++; /* (2) Punktevergabe */ this.totalPoints += 10; /* Bei einer Streak von 3 korrekten Antworten zusätzliches Audio-Feedback */ if (this.totalPoints % 30 === 0) { this.streakSound.play(); } setTimeout(() => { this.showNextPlayer(); }, 1000); } else { this.handleWrong(); } } else if (this.clubLearningMode) { const closestClub = this.findClosestClub(spokenWord); if (closestClub && closestClub.verein === this.currentLearningPlayer.verein) { this.handleCorrect(); if (!this.guessedClubs.includes(this.currentLearningPlayer.verein)) { this.guessedClubs.push(this.currentLearningPlayer.verein); } this.totalPoints += 5; /* Bei einer Streak von 3 korrekten Antworten zusätzliches Audio-Feedback */ if (this.totalPoints % 15 === 0) { this.streakSound.play(); } setTimeout(() => { this.showNextClub(); }, 1000); } else { this.handleWrong(); } } else { const closestPlayer = this.findClosestPlayer(spokenWord); if (closestPlayer) { this.scrollToPlayer(closestPlayer.name); } } } else { this.errorMessage = "Spracherkennung fehlgeschlagen. Bitte versuche es erneut."; this.increaseFail(); } }, (error) => { clearTimeout(recognitionTimeout); this.isListening = false; this.micButtonDisabled = false; this.errorMessage = "Fehler bei der Spracherkennung: " + error; console.error(error); this.increaseFail(); } ); }, /* Wiederverwendbare Helfer für richtig/falsch (Feature 4: Audio-Feedback) */ handleCorrect() { this.correctPlayerIndex = this.currentLearningIndex; this.successSound.play(); this.consecutiveFails = 0; }, handleWrong() { this.wrongSound.play(); this.errorMessage = "Versuche es nochmal!"; this.increaseFail(); }, increaseFail() { this.consecutiveFails++; /* Kontextueller Tipp nach 2 Fehlschlägen in Folge (Feature 3) */ if (this.consecutiveFails >= 2) { this.hintVisible = true; } }, resetQuizState() { this.correctPlayerIndex = null; this.recognizedText = ""; this.errorMessage = ""; this.consecutiveFails = 0; this.hintVisible = false; } } }; </script> <style> #app { text-align: center; background-color: #f6f6f6; padding-top: 70px; } .stats-bar { position: fixed; top: 50px; left: 0; right: 0; height: 40px; background-color: #eeeeee; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; z-index: 999; } .progress-info, .score-info { font-size: 14px; } .app-bar { position: fixed; top: 90px; left: 0; right: 0; height: 50px; background-color: grey; display: flex; justify-content: space-around; align-items: center; box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); z-index: 998; } .tab-button { background-color: transparent; color: #fff; border: none; font-size: 16px; font-weight: bold; padding: 10px; cursor: pointer; outline: none; } .active-tab { border-bottom: 2px solid #1899d6; } .button-80 { background: #fff; backface-visibility: hidden; border-radius: 0.375rem; border-style: solid; border-width: 0.125rem; box-sizing: border-box; color: #212121; cursor: pointer; display: inline-block; font-size: 1.125rem; font-weight: 700; margin-top: 20px; padding: 0.875rem 1.125rem; position: relative; text-align: center; text-decoration: none; transform: translateZ(0) scale(1); transition: transform 0.2s; user-select: none; } .button-80:not(:disabled):hover { transform: scale(1.05); } .button-80:not(:disabled):hover:active { transform: scale(1.05) translateY(0.125rem); } .button-80:focus { outline: 0 solid transparent; } .button-80:not(:disabled):active { transform: translateY(0.125rem); } .player-row { display: flex; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; margin-top: 160px; /* Platz schaffen für die fixed Bars */ } .player-card { background-color: #ffffff; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); border-radius: 10px; overflow: hidden; text-align: center; margin: 10px; width: 250px; position: relative; } .player-card img { width: 100%; height: auto; } .player-card .club-badge { position: absolute; bottom: 10px; right: 10px; width: 25%; } .player-card p { margin: 10px 0; } .player-card .player-name { font-size: 18px; font-weight: bold; color: #004d99; } .player-card .player-info { font-size: 14px; color: #666; } .correct-answer { border: 3px solid #00ff00; } .floating-mic { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #f44336; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); } .floating-mic.listening { background-color: #4caf50; } .pulse { position: absolute; border: 5px solid #aaffaa; border-radius: 50%; width: 100%; height: 100%; top: 0; left: 0; animation: pulse-animation 1s infinite; } @keyframes pulse-animation { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.85); opacity: 0; } } .error-message { color: red; font-weight: bold; margin-top: 10px; } .guessed-clubs { margin-top: 20px; } .guessed-clubs ul { list-style: none; padding: 0; } .guessed-clubs li { margin-bottom: 5px; } .hint-box { margin: 10px auto; padding: 10px; background-color: #fef8c7; color: #333; border: 1px dashed #ccc; max-width: 80%; text-align: left; } </style>
+  </section>
+
+  <!-- ─── Player Quiz ─── -->
+  <section v-if="activeTab === 'player-quiz'" class="quiz-view">
+    <div class="quiz-card glass animate-slide-up" v-if="currentPlayer">
+      <div class="quiz-card__image-wrap">
+        <img :src="currentPlayer.Bild" :alt="'Quiz'" class="quiz-card__image" @error="onImgError" />
+        <img :src="currentPlayer.Wappen" class="quiz-card__badge" />
+      </div>
+      <div class="quiz-card__body">
+        <p class="quiz-card__prompt">Wie heißt dieser Spieler?</p>
+
+        <!-- Live transcript -->
+        <div class="quiz-card__transcript" v-if="speech.interimTranscript.value || speech.transcript.value">
+          <span class="transcript-interim" v-if="speech.interimTranscript.value">{{ speech.interimTranscript.value }}</span>
+          <span class="transcript-final" v-if="speech.transcript.value">{{ speech.transcript.value }}</span>
+        </div>
+
+        <!-- Feedback -->
+        <div v-if="quizFeedback === 'correct'" class="quiz-card__feedback quiz-card__feedback--correct animate-success">
+          ✅ Richtig! {{ currentPlayer.Name }}
+        </div>
+        <div v-if="quizFeedback === 'wrong'" class="quiz-card__feedback quiz-card__feedback--wrong animate-shake">
+          ❌ Versuche es nochmal!
+        </div>
+
+        <!-- Hint -->
+        <div v-if="showHint" class="quiz-card__hint glass">
+          💡 Tipp: {{ currentPlayer.Name.charAt(0) }}... ({{ currentPlayer.Verein }})
+        </div>
+
+        <!-- Error -->
+        <p v-if="speech.error.value" class="quiz-card__error">{{ speech.error.value }}</p>
+
+        <button class="quiz-card__skip" @click="nextQuizPlayer">Überspringen →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Club Quiz ─── -->
+  <section v-if="activeTab === 'club-quiz'" class="quiz-view">
+    <div class="quiz-card glass animate-slide-up" v-if="currentPlayer">
+      <div class="quiz-card__body" style="text-align: center;">
+        <p class="quiz-card__name-display">{{ currentPlayer.Name }}</p>
+        <p class="quiz-card__prompt">Bei welchem Verein spielt er?</p>
+
+        <div class="quiz-card__transcript" v-if="speech.interimTranscript.value || speech.transcript.value">
+          <span class="transcript-interim" v-if="speech.interimTranscript.value">{{ speech.interimTranscript.value }}</span>
+          <span class="transcript-final" v-if="speech.transcript.value">{{ speech.transcript.value }}</span>
+        </div>
+
+        <div v-if="quizFeedback === 'correct'" class="quiz-card__feedback quiz-card__feedback--correct animate-success">
+          ✅ Richtig! {{ currentPlayer.Verein }}
+        </div>
+        <div v-if="quizFeedback === 'wrong'" class="quiz-card__feedback quiz-card__feedback--wrong animate-shake">
+          ❌ Versuche es nochmal!
+        </div>
+
+        <div v-if="showHint" class="quiz-card__hint glass">
+          💡 Tipp: {{ currentPlayer.Verein.charAt(0) }}...
+        </div>
+
+        <p v-if="speech.error.value" class="quiz-card__error">{{ speech.error.value }}</p>
+
+        <button class="quiz-card__skip" @click="nextQuizPlayer">Überspringen →</button>
+      </div>
+    </div>
+  </section>
+
+  <MicButton
+    :is-listening="speech.isListening.value"
+    :show-success="quizFeedback === 'correct'"
+    :show-error="quizFeedback === 'wrong'"
+    @click="handleMicClick"
+  />
+</template>
+
+<script setup>
+import { ref, computed, onMounted } from 'vue'
+import NavBar from './components/NavBar.vue'
+import StatsBar from './components/StatsBar.vue'
+import TeamFilter from './components/TeamFilter.vue'
+import PlayerCard from './components/PlayerCard.vue'
+import MicButton from './components/MicButton.vue'
+
+import { useSpeechRecognition } from './composables/useSpeechRecognition.js'
+import { useSpeechSynthesis } from './composables/useSpeechSynthesis.js'
+import { usePlayerMatch } from './composables/usePlayerMatch.js'
+
+import playersData from './data/players.json'
+
+// ─── State ───
+const players = ref(playersData)
+const activeTab = ref('browse')
+const selectedClub = ref('all')
+const points = ref(0)
+const streak = ref(0)
+const learnedCount = ref(0)
+const lastConfidence = ref(0)
+const quizFeedback = ref('')   // 'correct' | 'wrong' | ''
+const showHint = ref(false)
+const consecutiveFails = ref(0)
+const currentPlayerIndex = ref(-1)
+const highlightedPlayer = ref('')
+
+// ─── Composables ───
+const speech = useSpeechRecognition()
+const tts = useSpeechSynthesis()
+const { findPlayer, findClub, isMatch } = usePlayerMatch(players.value)
+
+// ─── Computed ───
+const clubNames = computed(() => {
+  return [...new Set(players.value.map(p => p.Verein))].sort()
+})
+
+const wappenMap = computed(() => {
+  const map = {}
+  players.value.forEach(p => { map[p.Verein] = p.Wappen })
+  return map
+})
+
+const filteredPlayers = computed(() => {
+  if (selectedClub.value === 'all') return players.value
+  return players.value.filter(p => p.Verein === selectedClub.value)
+})
+
+const currentPlayer = computed(() => {
+  if (currentPlayerIndex.value < 0) return null
+  return players.value[currentPlayerIndex.value]
+})
+
+// ─── Quiz Logic ───
+function nextQuizPlayer() {
+  quizFeedback.value = ''
+  showHint.value = false
+  consecutiveFails.value = 0
+  lastConfidence.value = 0
+
+  let idx
+  do {
+    idx = Math.floor(Math.random() * players.value.length)
+  } while (idx === currentPlayerIndex.value && players.value.length > 1)
+
+  currentPlayerIndex.value = idx
+}
+
+async function handleMicClick() {
+  if (speech.isListening.value) {
+    speech.stop()
+    return
+  }
+
+  const result = await speech.listen()
+  if (!result) return
+
+  if (activeTab.value === 'browse') {
+    // Browse mode: find and highlight player
+    const match = findPlayer(result)
+    if (match) {
+      highlightedPlayer.value = match.player.Name
+      lastConfidence.value = match.confidence
+      // Scroll to player
+      const el = document.getElementById(`player-${match.player.Name.replace(/\s/g, '-').toLowerCase()}`)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      tts.speak(match.player.Name)
+      setTimeout(() => { highlightedPlayer.value = '' }, 3000)
+    }
+  } else if (activeTab.value === 'player-quiz' && currentPlayer.value) {
+    const match = isMatch(result, currentPlayer.value.Name, 60)
+    lastConfidence.value = findPlayer(result)?.confidence || 0
+
+    if (match) {
+      quizFeedback.value = 'correct'
+      streak.value++
+      points.value += 10
+      learnedCount.value++
+      tts.announceCorrect(currentPlayer.value.Name)
+      setTimeout(() => nextQuizPlayer(), 1800)
+    } else {
+      quizFeedback.value = 'wrong'
+      streak.value = 0
+      consecutiveFails.value++
+      tts.announceWrong()
+      if (consecutiveFails.value >= 2) showHint.value = true
+      setTimeout(() => { quizFeedback.value = '' }, 1500)
+    }
+  } else if (activeTab.value === 'club-quiz' && currentPlayer.value) {
+    const clubMatch = findClub(result)
+    lastConfidence.value = clubMatch?.confidence || 0
+
+    if (clubMatch && clubMatch.club === currentPlayer.value.Verein) {
+      quizFeedback.value = 'correct'
+      streak.value++
+      points.value += 5
+      learnedCount.value++
+      tts.announceClubCorrect(currentPlayer.value.Verein)
+      setTimeout(() => nextQuizPlayer(), 1800)
+    } else {
+      quizFeedback.value = 'wrong'
+      streak.value = 0
+      consecutiveFails.value++
+      tts.announceWrong()
+      if (consecutiveFails.value >= 2) showHint.value = true
+      setTimeout(() => { quizFeedback.value = '' }, 1500)
+    }
+  }
+}
+
+function onImgError(e) {
+  e.target.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260"><rect fill="%23141420" width="200" height="260"/><text x="100" y="140" text-anchor="middle" fill="%238b8b9e" font-size="48">⚽</text></svg>'
+}
+
+// ─── Init ───
+onMounted(() => {
+  nextQuizPlayer()
+})
+</script>
+
+<style>
+/* ─── Browse View ─── */
+.browse-view {
+  padding-top: var(--space-4);
+}
+
+.player-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+/* ─── Quiz View ─── */
+.quiz-view {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: var(--space-7);
+  min-height: 60vh;
+}
+
+.quiz-card {
+  width: 100%;
+  max-width: 360px;
+  overflow: hidden;
+}
+
+.quiz-card__image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.quiz-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quiz-card__badge {
+  position: absolute;
+  bottom: var(--space-3);
+  right: var(--space-3);
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+}
+
+.quiz-card__body {
+  padding: var(--space-5);
+}
+
+.quiz-card__prompt {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.quiz-card__name-display {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--accent-hover);
+  margin-bottom: var(--space-3);
+}
+
+.quiz-card__transcript {
+  margin-bottom: var(--space-3);
+  padding: var(--space-3);
+  background: var(--surface-hover);
+  border-radius: var(--radius-md);
+  min-height: 40px;
+}
+
+.transcript-interim {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.transcript-final {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.quiz-card__feedback {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-3);
+}
+
+.quiz-card__feedback--correct {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--success);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.quiz-card__feedback--wrong {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--error);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.quiz-card__hint {
+  padding: var(--space-3);
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--warning);
+  border-color: rgba(245, 158, 11, 0.2) !important;
+}
+
+.quiz-card__error {
+  color: var(--error);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-3);
+}
+
+.quiz-card__skip {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--duration) var(--ease-out);
+  min-height: 44px;
+}
+
+.quiz-card__skip:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  background: var(--surface-hover);
+}
+
+@media (max-width: 640px) {
+  .quiz-card {
+    max-width: 100%;
+    border-radius: var(--radius-lg);
+  }
+}
+</style>
