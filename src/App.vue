@@ -30,8 +30,8 @@
   <section v-if="activeTab === 'player-quiz'" class="quiz-view">
     <div class="quiz-card glass animate-slide-up" v-if="currentPlayer">
       <div class="quiz-card__image-wrap">
-        <img :src="currentPlayer.Bild" :alt="'Quiz'" class="quiz-card__image" @error="onImgError" />
-        <img :src="currentPlayer.Wappen" class="quiz-card__badge" />
+        <img :src="proxyImage(currentPlayer.Bild)" :alt="'Quiz'" class="quiz-card__image" referrerpolicy="no-referrer" @error="onImgError" />
+        <img :src="proxyImage(currentPlayer.Wappen)" class="quiz-card__badge" referrerpolicy="no-referrer" />
       </div>
       <div class="quiz-card__body">
         <p class="quiz-card__prompt">Wie heißt dieser Spieler?</p>
@@ -112,6 +112,7 @@ import MicButton from './components/MicButton.vue'
 import { useSpeechRecognition } from './composables/useSpeechRecognition.js'
 import { useSpeechSynthesis } from './composables/useSpeechSynthesis.js'
 import { usePlayerMatch } from './composables/usePlayerMatch.js'
+import { proxyImage } from './composables/useImageProxy.js'
 
 import playersData from './data/players.json'
 
@@ -141,7 +142,7 @@ const clubNames = computed(() => {
 
 const wappenMap = computed(() => {
   const map = {}
-  players.value.forEach(p => { map[p.Verein] = p.Wappen })
+  players.value.forEach(p => { map[p.Verein] = proxyImage(p.Wappen) })
   return map
 })
 

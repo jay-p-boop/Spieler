@@ -9,17 +9,19 @@
   >
     <div class="player-card__image-wrap">
       <img
-        :src="player.Bild"
+        :src="bildSrc"
         :alt="player.Name"
         class="player-card__image"
         loading="lazy"
+        referrerpolicy="no-referrer"
         @error="onImgError"
       />
       <img
-        :src="player.Wappen"
+        :src="wappenSrc"
         :alt="player.Verein"
         class="player-card__badge"
         loading="lazy"
+        referrerpolicy="no-referrer"
       />
       <div class="player-card__value-badge">
         {{ player.Marktwert }}
@@ -33,11 +35,17 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+import { proxyImage } from '../composables/useImageProxy.js'
+
+const props = defineProps({
   player: { type: Object, required: true },
   isCorrect: { type: Boolean, default: false },
   isWrong: { type: Boolean, default: false },
 })
+
+const bildSrc = computed(() => proxyImage(props.player.Bild))
+const wappenSrc = computed(() => proxyImage(props.player.Wappen))
 
 function onImgError(e) {
   e.target.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect fill="%23141420" width="200" height="200"/><text x="100" y="110" text-anchor="middle" fill="%238b8b9e" font-size="48">⚽</text></svg>'
