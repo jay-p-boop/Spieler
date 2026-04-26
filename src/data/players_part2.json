@@ -1,0 +1,842 @@
+[
+  {
+    "Name": "Oliver Baumann",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/55089-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Luca Philipp",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/432671-1700000000.jpg?lm=1",
+    "Marktwert": "750 Tsd. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Albian Hajdari",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/579459-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Robin Hranac",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/620217-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Ozan Kabak",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/361260-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Koki Machida",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/415035-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Kevin Akpoguma",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/160241-1700000000.jpg?lm=1",
+    "Marktwert": "2,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Bernardo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/364258-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Valentin Gendrey",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/569387-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Leon Avdullahu",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/667457-1700000000.jpg?lm=1",
+    "Marktwert": "25,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Wouter Burger",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/412953-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Grischa Prömel",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/234029-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Alexander Prass",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/434116-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Muhammed Damar",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/789898-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Andrej Kramaric",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/46580-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Bazoumana Touré",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/1067904-1700000000.jpg?lm=1",
+    "Marktwert": "35,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Fisnik Asllani",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/524290-1700000000.jpg?lm=1",
+    "Marktwert": "30,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Tim Lemperle",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/553285-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Adam Hlozek",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/552057-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Max Moerstedt",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/923595-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Ihlas Bebou",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/237164-1700000000.jpg?lm=1",
+    "Marktwert": "800 Tsd. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/533.png",
+    "Verein": "TSG 1899 Hoffenheim"
+  },
+  {
+    "Name": "Kamil Grabara",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/346551-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Marius Müller",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/118161-1700000000.jpg?lm=1",
+    "Marktwert": "1,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Konstantinos Koulierakis",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/669380-1700000000.jpg?lm=1",
+    "Marktwert": "25,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Jeanuël Belocian",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/919515-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Jonas Adjetey",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/734676-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Denis Vavro",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/239962-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Jenson Seelt",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/617755-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Moritz Jenz",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/460245-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Joakim Maehle",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/369674-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Aaron Zehnter",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/730484-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Saël Kumbedi",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/951579-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Kilian Fischer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/435796-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Vini Souza",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/663581-1700000000.jpg?lm=1",
+    "Marktwert": "8,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Mattias Svanberg",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/342405-1700000000.jpg?lm=1",
+    "Marktwert": "9,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Maximilian Arnold",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/117674-1700000000.jpg?lm=1",
+    "Marktwert": "4,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Lovro Majer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/387106-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Bence Dárdai",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/789252-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Christian Eriksen",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/69633-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Patrick Wimmer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/533295-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Adam Daghim",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/881297-1700000000.jpg?lm=1",
+    "Marktwert": "7,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Mohamed Amoura",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/746910-1700000000.jpg?lm=1",
+    "Marktwert": "27,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Dzenan Pejcinovic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/819636-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Jonas Wind",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/391004-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/82.png",
+    "Verein": "VfL Wolfsburg"
+  },
+  {
+    "Name": "Noah Atubolu",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/526845-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Florian Müller",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/284769-1700000000.jpg?lm=1",
+    "Marktwert": "1,20 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Philipp Lienhart",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/225657-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Bruno Ogbus",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/863759-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Matthias Ginter",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/124502-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Max Rosenfelder",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/599419-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Jordy Makengo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/815078-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Christian Günter",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/93707-1700000000.jpg?lm=1",
+    "Marktwert": "2,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Philipp Treu",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/335993-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Patrick Osterhage",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/443331-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Johan Manzambi",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/927353-1700000000.jpg?lm=1",
+    "Marktwert": "35,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Maximilian Eggestein",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/190284-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Derry Scherhant",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/820957-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Vincenzo Grifo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/185077-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Cyriaque Irié",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/1145064-1700000000.jpg?lm=1",
+    "Marktwert": "8,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Niklas Beste",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/342967-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Yuito Suzuki",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/668606-1700000000.jpg?lm=1",
+    "Marktwert": "18,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Igor Matanovic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/605268-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Lucas Höler",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/248999-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/60.png",
+    "Verein": "SC Freiburg"
+  },
+  {
+    "Name": "Mio Backhaus",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/620295-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Karl Hein",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/493513-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Karim Coulibaly",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/1084638-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Marco Friedl",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/156990-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Amos Pieper",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/334221-1700000000.jpg?lm=1",
+    "Marktwert": "4,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Niklas Stark",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/162434-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Felix Agu",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/393512-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Yukinari Sugawara",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/405385-1700000000.jpg?lm=1",
+    "Marktwert": "7,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Mitchell Weiser",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/119211-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Senne Lynen",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/338668-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Jens Stage",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/289835-1700000000.jpg?lm=1",
+    "Marktwert": "14,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Romano Schmid",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/346853-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Cameron Puertas",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/449592-1700000000.jpg?lm=1",
+    "Marktwert": "8,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Samuel Mbangula",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/654991-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Marco Grüll",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/391766-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Justin Njinmah",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/596153-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Jovan Milosevic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/943795-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Victor Boniface",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/656681-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Keke Topp",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/701757-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/86.png",
+    "Verein": "SV Werder Bremen"
+  },
+  {
+    "Name": "Sander Tangvik",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/549378-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Daniel Heuer Fernandes",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/84993-1700000000.jpg?lm=1",
+    "Marktwert": "1,20 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Luka Vuskovic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/892160-1700000000.jpg?lm=1",
+    "Marktwert": "60,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Jordan Torunarigha",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/227110-1700000000.jpg?lm=1",
+    "Marktwert": "4,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Daniel Elfadli",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/529895-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Warmed Omari",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/711996-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Miro Muheim",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/298603-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "William Mikelbrencis",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/743500-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Nicolai Remberg",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/592534-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Albert Sambi Lokonga",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/381967-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Nicolás Capaldo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/649672-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Fábio Vieira",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/537598-1700000000.jpg?lm=1",
+    "Marktwert": "18,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Albert Grønbaek",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/503866-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Philip Otele",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/678655-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Jean-Luc Dompé",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/291222-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Damion Downs",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/820241-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Ransford Königsdörffer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/470038-1700000000.jpg?lm=1",
+    "Marktwert": "4,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Robert Glatzel",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/196139-1700000000.jpg?lm=1",
+    "Marktwert": "1,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Yussuf Poulsen",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/157635-1700000000.jpg?lm=1",
+    "Marktwert": "1,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/41.png",
+    "Verein": "Hamburger SV"
+  },
+  {
+    "Name": "Finn Dahmen",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/251299-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Nediljko Labrovic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/610190-1700000000.jpg?lm=1",
+    "Marktwert": "2,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Chrislain Matsima",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/569383-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Noahkai Banks",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/923945-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Keven Schlotterbeck",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/413843-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Cédric Zesiger",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/382478-1700000000.jpg?lm=1",
+    "Marktwert": "5,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Jeffrey Gouweleeuw",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/106405-1700000000.jpg?lm=1",
+    "Marktwert": "1,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Dimitrios Giannoulis",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/295630-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Marius Wolf",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/193900-1700000000.jpg?lm=1",
+    "Marktwert": "2,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Kristijan Jakic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/374954-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Robin Fellhauer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/264960-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Han-Noah Massengo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/536508-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Elvis Rexhbecaj",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/280575-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Anton Kade",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/654234-1700000000.jpg?lm=1",
+    "Marktwert": "7,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Alexis Claude-Maurice",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/384593-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Mert Kömür",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/777005-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Fabian Rieder",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/507341-1700000000.jpg?lm=1",
+    "Marktwert": "8,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Rodrigo Ribeiro",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/726701-1700000000.jpg?lm=1",
+    "Marktwert": "4,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  },
+  {
+    "Name": "Michael Gregoritsch",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/120205-1700000000.jpg?lm=1",
+    "Marktwert": "1,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/167.png",
+    "Verein": "FC Augsburg"
+  }
+]

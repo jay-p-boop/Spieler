@@ -1,0 +1,884 @@
+[
+  {
+    "Name": "Jonas Urbig",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/607720-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Manuel Neuer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/17259-1700000000.jpg?lm=1",
+    "Marktwert": "4,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Sven Ulreich",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/40680-1700000000.jpg?lm=1",
+    "Marktwert": "500 Tsd. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Dayot Upamecano",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/344695-1700000000.jpg?lm=1",
+    "Marktwert": "70,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Jonathan Tah",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/196357-1700000000.jpg?lm=1",
+    "Marktwert": "30,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Min-jae Kim",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/503482-1700000000.jpg?lm=1",
+    "Marktwert": "25,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Hiroki Ito",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/353892-1700000000.jpg?lm=1",
+    "Marktwert": "18,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Alphonso Davies",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/424204-1700000000.jpg?lm=1",
+    "Marktwert": "45,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Josip Stanisic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/483046-1700000000.jpg?lm=1",
+    "Marktwert": "35,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Konrad Laimer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/223967-1700000000.jpg?lm=1",
+    "Marktwert": "32,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Aleksandar Pavlovic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/792380-1700000000.jpg?lm=1",
+    "Marktwert": "75,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Joshua Kimmich",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/161056-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Tom Bischof",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/822959-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Leon Goretzka",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/153084-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Jamal Musiala",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/580195-1700000000.jpg?lm=1",
+    "Marktwert": "120,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Lennart Karl",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/1075147-1700000000.jpg?lm=1",
+    "Marktwert": "60,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Raphaël Guerreiro",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/170986-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Luis Díaz",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/480692-1700000000.jpg?lm=1",
+    "Marktwert": "70,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Michael Olise",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/566723-1700000000.jpg?lm=1",
+    "Marktwert": "140,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Serge Gnabry",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/159471-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Harry Kane",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/132098-1700000000.jpg?lm=1",
+    "Marktwert": "65,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Nicolas Jackson",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/776890-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/27.png",
+    "Verein": "FC Bayern München"
+  },
+  {
+    "Name": "Gregor Kobel",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/257814-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Alexander Meyer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/76158-1700000000.jpg?lm=1",
+    "Marktwert": "800 Tsd. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Nico Schlotterbeck",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/388198-1700000000.jpg?lm=1",
+    "Marktwert": "55,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Waldemar Anton",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/193004-1700000000.jpg?lm=1",
+    "Marktwert": "18,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Ramy Bensebaini",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/284732-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Emre Can",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/119296-1700000000.jpg?lm=1",
+    "Marktwert": "4,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Niklas Süle",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/166601-1700000000.jpg?lm=1",
+    "Marktwert": "4,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Daniel Svensson",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/579287-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Julian Ryerson",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/370789-1700000000.jpg?lm=1",
+    "Marktwert": "25,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Felix Nmecha",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/406640-1700000000.jpg?lm=1",
+    "Marktwert": "50,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Jobe Bellingham",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/796297-1700000000.jpg?lm=1",
+    "Marktwert": "30,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Carney Chukwuemeka",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/659459-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Marcel Sabitzer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/106987-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Yan Couto",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/627228-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Julian Brandt",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/187492-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Karim Adeyemi",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/496094-1700000000.jpg?lm=1",
+    "Marktwert": "50,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Serhou Guirassy",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/270541-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Maximilian Beier",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/578392-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Fábio Silva",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/505653-1700000000.jpg?lm=1",
+    "Marktwert": "28,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+    "Verein": "Borussia Dortmund"
+  },
+  {
+    "Name": "Maarten Vandevoordt",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/486046-1700000000.jpg?lm=1",
+    "Marktwert": "8,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Péter Gulácsi",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/57071-1700000000.jpg?lm=1",
+    "Marktwert": "2,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Leopold Zingerle",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/160971-1700000000.jpg?lm=1",
+    "Marktwert": "400 Tsd. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Castello Lukeba",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/618472-1700000000.jpg?lm=1",
+    "Marktwert": "45,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "El Chadaille Bitshiabu",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/787912-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Willi Orbán",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/93740-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Lukas Klostermann",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/215599-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "David Raum",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/318204-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Max Finkgräfe",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/810649-1700000000.jpg?lm=1",
+    "Marktwert": "3,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Ridle Baku",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/327251-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Benjamin Henrichs",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/202591-1700000000.jpg?lm=1",
+    "Marktwert": "9,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Kosta Nedeljkovic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/848682-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Nicolas Seiwald",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/404950-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Assan Ouédraogo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/897424-1700000000.jpg?lm=1",
+    "Marktwert": "28,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Ezechiel Banzuzi",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/865682-1700000000.jpg?lm=1",
+    "Marktwert": "18,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Xaver Schlager",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/223979-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Christoph Baumgartner",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/324278-1700000000.jpg?lm=1",
+    "Marktwert": "30,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Brajan Gruda",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/700106-1700000000.jpg?lm=1",
+    "Marktwert": "28,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Andrija Maksimovic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/952779-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Yan Diomande",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/1390649-1700000000.jpg?lm=1",
+    "Marktwert": "75,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Antonio Nusa",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/894914-1700000000.jpg?lm=1",
+    "Marktwert": "32,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Johan Bakayoko",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/565424-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Rômulo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/957874-1700000000.jpg?lm=1",
+    "Marktwert": "30,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Conrad Harder",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/807386-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/23826.png",
+    "Verein": "RB Leipzig"
+  },
+  {
+    "Name": "Mark Flekken",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/125714-1700000000.jpg?lm=1",
+    "Marktwert": "8,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Jonas Omlin",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/247915-1700000000.jpg?lm=1",
+    "Marktwert": "1,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Jarell Quansah",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/632349-1700000000.jpg?lm=1",
+    "Marktwert": "45,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Edmond Tapsoba",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/564545-1700000000.jpg?lm=1",
+    "Marktwert": "35,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Loïc Badé",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/730581-1700000000.jpg?lm=1",
+    "Marktwert": "25,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Axel Tape",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/1077670-1700000000.jpg?lm=1",
+    "Marktwert": "8,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Alejandro Grimaldo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/193082-1700000000.jpg?lm=1",
+    "Marktwert": "24,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Arthur",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/977464-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Lucas Vázquez",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/221316-1700000000.jpg?lm=1",
+    "Marktwert": "2,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Equi Fernández",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/664708-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Robert Andrich",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/159088-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Exequiel Palacios",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/401578-1700000000.jpg?lm=1",
+    "Marktwert": "30,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Aleix García",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/261504-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Ibrahim Maza",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/905011-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Malik Tillman",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/467437-1700000000.jpg?lm=1",
+    "Marktwert": "30,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Jonas Hofmann",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/7161-1700000000.jpg?lm=1",
+    "Marktwert": "2,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Eliesse Ben Seghir",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/810895-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Martin Terrier",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/442891-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Ernest Poku",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/718303-1700000000.jpg?lm=1",
+    "Marktwert": "25,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Nathan Tella",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/340322-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Christian Kofane",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/1364454-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Patrik Schick",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/242086-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/15.png",
+    "Verein": "Bayer 04 Leverkusen"
+  },
+  {
+    "Name": "Kauã Santos",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/997861-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Michael Zetterer",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/196813-1700000000.jpg?lm=1",
+    "Marktwert": "4,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Jens Grahl",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/40034-1700000000.jpg?lm=1",
+    "Marktwert": "200 Tsd. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Arthur Theate",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/368891-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Nnamdi Collins",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/684315-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Robin Koch",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/328784-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Aurèle Amenda",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/635645-1700000000.jpg?lm=1",
+    "Marktwert": "8,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Nathaniel Brown",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/691892-1700000000.jpg?lm=1",
+    "Marktwert": "35,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Rasmus Kristensen",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/369684-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Ellyes Skhiri",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/290587-1700000000.jpg?lm=1",
+    "Marktwert": "6,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Hugo Larsson",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/931838-1700000000.jpg?lm=1",
+    "Marktwert": "32,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Oscar Højlund",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/846310-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Can Uzun",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/816585-1700000000.jpg?lm=1",
+    "Marktwert": "45,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Farès Chaïbi",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/855015-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Mario Götze",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/74842-1700000000.jpg?lm=1",
+    "Marktwert": "3,50 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Jean-Mattéo Bahoya",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/939964-1700000000.jpg?lm=1",
+    "Marktwert": "25,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Ritsu Doan",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/358504-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Ansgar Knauff",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/429874-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Jonathan Burkardt",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/333647-1700000000.jpg?lm=1",
+    "Marktwert": "35,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Arnaud Kalimuendo",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/585959-1700000000.jpg?lm=1",
+    "Marktwert": "25,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/24.png",
+    "Verein": "Eintracht Frankfurt"
+  },
+  {
+    "Name": "Alexander Nübel",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/195778-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Fabian Bredlow",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/187624-1700000000.jpg?lm=1",
+    "Marktwert": "800 Tsd. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Finn Jeltsch",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/924117-1700000000.jpg?lm=1",
+    "Marktwert": "30,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Ramon Hendriks",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/436064-1700000000.jpg?lm=1",
+    "Marktwert": "20,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Jeff Chabot",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/303219-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Luca Jaquez",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/539798-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Maximilian Mittelstädt",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/282660-1700000000.jpg?lm=1",
+    "Marktwert": "18,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Josha Vagnoman",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/448258-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Angelo Stiller",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/443710-1700000000.jpg?lm=1",
+    "Marktwert": "45,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Chema Andrés",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/948279-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Atakan Karazor",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/232320-1700000000.jpg?lm=1",
+    "Marktwert": "9,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Nikolas Nartey",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/400546-1700000000.jpg?lm=1",
+    "Marktwert": "7,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Bilal El Khannouss",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/654982-1700000000.jpg?lm=1",
+    "Marktwert": "32,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Chris Führich",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/272278-1700000000.jpg?lm=1",
+    "Marktwert": "10,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Jamie Leweling",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/518505-1700000000.jpg?lm=1",
+    "Marktwert": "40,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Badredine Bouanani",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/707242-1700000000.jpg?lm=1",
+    "Marktwert": "12,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Ermedin Demirovic",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/335457-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Deniz Undav",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/339314-1700000000.jpg?lm=1",
+    "Marktwert": "22,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  },
+  {
+    "Name": "Tiago Tomás",
+    "Bild": "https://img.a.transfermarkt.technology/portrait/medium/616344-1700000000.jpg?lm=1",
+    "Marktwert": "15,00 Mio. €",
+    "Wappen": "https://tmssl.akamaized.net/images/wappen/head/79.png",
+    "Verein": "VfB Stuttgart"
+  }
+]
